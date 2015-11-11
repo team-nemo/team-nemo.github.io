@@ -4,7 +4,24 @@ html {
 }
 
 body {
+  max-width: 100%;
   font-family: sans-serif;
   color: white;
   text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+#slogan {
+  font-size: 24px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
 }
