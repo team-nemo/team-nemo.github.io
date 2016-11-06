@@ -1,26 +1,58 @@
-html {
-  height: 100%;
-  background-color: #120c12;
-}
-
 body {
-  font-family: sans-serif;
+  background: url(img/bg.png);
+  background-size: cover;
+  background-position: center;
+  font-family: 'Rubik', sans-serif;
+  font-size: 24px;
   color: white;
-  text-align: center;
 }
 
 img {
   max-width: 100%;
 }
 
-#slogan {
-  font-size: 24px;
+#logo {
+  margin-top: 5%;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 200px;
+#container {
+  min-height: 100%;
+  margin: 0 5% 0 5%;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  margin: 0 5% 0 0;
+  max-width: 600px;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 36px;
+}
+
+p {
+  margin-top: 2em;
+}
+
+@media screen and (max-width: 600px), screen and (max-height: 660px) {
+  .bottom {
+    position: relative;
+  }
+  #container {
+    min-height: 0;
+  }
+  #logo {
+    margin-bottom: 5em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 24px;
+  }
+  body {
+    font-size: 16px;
+  }
 }
