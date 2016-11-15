@@ -19,6 +19,7 @@ body {
   font-size: 24px;
   font-weight: 300;
   color: white;
+  margin: 0;
 }
 
 img {
@@ -39,26 +40,38 @@ a {
 }
 
 #container {
-  height: 100%;
-  margin: 0% 5% 0 5%;
+  height: 90%;
+  margin: 5% 5% 5% 5%;
   border-collapse: collapse;
   display: table;
   max-width: 600px;
 }
 
+#menuContainer {
+  position: relative;
+  float: right;
+  font-weight: 400;
+  margin-right: 5%;
+}
+
 #menu {
-  position: absolute;
-  right: 30px;
-  top: 30px;
+  position: relative;
+  width: 100%;
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  list-style-type: none;
-  font-weight: 400;
-  width: 220px;
+}
+
+#nav-icon2 {
+  position: relative;
+  width: 60px;
+  float: right;
+  display: none;
+  z-index: 10;
 }
 
 .bottom {
-  margin: 0 5% 0 0;
+  margin: 0 0 0 0;
   display : table-row;
   vertical-align : bottom;
   height: 1px;
@@ -72,11 +85,44 @@ p {
   margin-top: 2em;
 }
 
+li.selected {
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 500px) and (max-height: 700px), screen and (max-width: 500px) and (max-height: 460px) {
   #container {
     min-height: 0;
   }
 }
+
+
+@media screen and (max-width: 820px) {
+  #menu {
+    display: none;
+    /*top: 0px;*/
+    text-align: center;
+  }
+  #nav-icon2 {
+    display: block;
+  }
+  #menuContainer {
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 0;
+  }
+  #menuContainer.open #menu {
+    display: block;
+  }
+  #menuContainer.open {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: rgba(94, 54, 104, 1);
+    background: linear-gradient(rgba(94, 54, 104, 1), rgba(0,0,0,0));
+    height: 85px;
+  }
+}
+
 
 @media screen and (max-width: 500px) {
   h1 {
@@ -88,19 +134,7 @@ p {
   .reflogo {
     height: 60px;
   }
-}
-
-@media screen and (max-width: 820px) {
-  #menu {
-    position: relative;
-    left: 0;
-    top: 0;
-    margin-bottom: 1em;
-    width: auto;
-  }
-  #menu li {
-    display: inline-block;
-    border-bottom: 1px solid;
-    margin: 0 0.2em 0 0.2em;
+  #nav-icon2 {
+    zoom: 50%;
   }
 }

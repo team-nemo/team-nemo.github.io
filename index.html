@@ -4,13 +4,22 @@
   <title>Team NEMO</title>
   <link href="https://fonts.googleapis.com/css?family=Rubik:300,400" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="navicon.css">
+  <script src="script.js"></script>
 </head>
-<body>
-  <div id="container">
+<body onload="init()">
+  <div id="menuContainer">
+    <div id="nav-icon2">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
     <ul id="menu">
+      <li class="selected"><a href="#">Home</a></li>
       <li><a href="humanexperience.html">Human experience</a></li>
       <li><a href="whatisnemo.html">What is NEMO?</a></li>
     </ul>
+  </div>
+  
+  <div id="container">
     <img id="logo" alt="Team NEMO" src="img/thenemoproject.png">
     <div class="bottom">
       <h1>A New Era of Measuring and Understanding Human Experience</h1>
